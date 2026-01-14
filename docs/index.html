@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stilizovane 3D figurice po fotografiji</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f0f12;
+  --card: #1c1c26;
+  --text: #f2f2f2;
+  --muted: #b3b3b3;
+  --accent: #4da6ff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+h1,h2,h3{margin-bottom:15px;}
+p{color:var(--muted);}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--accent);
+  color:#000;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  margin-top:20px;
+  transition:0.3s;
+}
+.btn:hover{background:#3399ff;color:#fff;}
+
+.hero-modern{
+  position:relative;
+  width:100%;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:20px;
+  margin-bottom:50px;
+  background:linear-gradient(135deg,#1a1a24,#0f0f12);
+}
+.hero-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 50px;
+  pointer-events:none;
+}
+.hero-bg img{
+  width:48%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.25;
+  filter:blur(2px);
+  border-radius:20px;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  max-width:800px;
+  color:#f2f2f2;
+  padding:0 20px;
+}
+.hero-content h1{font-size:48px;margin-bottom:20px;line-height:1.2;}
+.hero-content p{font-size:18px;color:#ccc;margin-bottom:30px;}
+.hero-buttons a.btn{margin:0 10px;padding:14px 28px;border-radius:12px;font-weight:600;transition:all 0.3s;}
+.hero-buttons a.btn:hover{background:#3399ff;color:#fff;}
+
+.section{margin-top:60px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:var(--card);padding:25px;border-radius:16px;transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(77,166,255,0.3);}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:30px;}
+.gallery figure{background:var(--card);padding:15px;border-radius:16px;text-align:center;}
+.gallery img{width:100%;border-radius:12px;transition:transform 0.3s;}
+.gallery img:hover{transform:scale(1.05);}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:10px;}
+
+footer{margin-top:80px;text-align:center;font-size:14px;color:var(--muted);padding-bottom:30px;}
+
+@media(max-width:768px){
+.hero-bg{flex-direction:column;padding:0;}
+.hero-bg img{width:100%;height:50%;margin-bottom:15px;}
+.hero-content h1{font-size:36px;}
+.hero-content p{font-size:16px;}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero-modern">
+    <div class="hero-bg">
+      <img src="images/pre-osoba.jpg" alt="Fotografija osobe">
+      <img src="images/posle-figurica.jpg" alt="Ručno farbana figurica">
+    </div>
+    <div class="hero-content">
+      <h1>Od tvoje fotografije do kolekcionarske figurice</h1>
+      <p>Stilizovana figurica sa uvećanom glavom i detaljima po tvojoj fotografiji. Savršen poklon i unikatni predmet.</p>
+      <div class="hero-buttons">
+        <a class="btn" href="https://wa.me/381603481381">Poruči putem WhatsAppa</a>
+        <a class="btn" href="mailto:dimitrijevasilisin@gmail.com">Poruči putem Emaila</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video rotacija -->
+  <section class="section">
+    <h2>Pogledaj figuricu u detalju</h2>
+    <div style="max-width:600px;margin:auto;">
+      <video autoplay muted loop playsinline style="width:100%;border-radius:16px;">
+        <source src="videos/rotacija.mp4" type="video/mp4">
+        Tvoj pregledač ne podržava video.
+      </video>
+    </div>
+  </section>
+
+  <!-- Jasno pre/posle -->
+  <section class="section">
+    <h2>Jasan pre i posle prikaz</h2>
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+      <div style="max-width:300px;text-align:center;">
+        <img src="images/pre-osoba.jpg" alt="Fotografija osobe" style="width:100%;border-radius:16px;">
+        <figcaption>Fotografija osobe</figcaption>
+      </div>
+      <div style="max-width:300px;text-align:center;">
+        <img src="images/posle-figurica.jpg" alt="Ručno farbana figurica" style="width:100%;border-radius:16px;">
+        <figcaption>Ručno farbana figurica</figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenovnik -->
+  <section class="section pricing">
+    <h2>Cenovnik</h2>
+    <div class="cards">
+      <div class="card"><h3>7 cm</h3><div class="price">30 €</div></div>
+      <div class="card"><h3>10 cm</h3><div class="price">40 €</div></div>
+      <div class="card"><h3>15 cm</h3><div class="price">50 €</div></div>
+    </div>
+    <div class="card" style="margin-top:30px;">🎨 <strong>Ručno farbanje:</strong> +30 € (ista cena za sve veličine)</div>
+    <p style="margin-top:15px;font-size:14px;">Cena dostave (PTT) se plaća posebno.</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Custom 3D Figurice · Ručna izrada · Srbija
+</footer>
+</body>
+</html>
